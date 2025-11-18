@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrarium: Your Mini-Eco Home (Biodiversity & Adaptation)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Color Palette Variables */
+        :root {
+            --Cream-Bg: #F0EAD6; /* SLIGHTLY DARKER, WARMER BACKGROUND */
+            --Primary-Green: #38761D; 
+            --Secondary-Green: #6AA84F; 
+            --Terracotta: #B3785E;
+            --Dark-Text: #222222; 
+        }
+
+        /* -------------------- General Reset & Body -------------------- */
+        body {
+            background-color: var(--Cream-Bg);
+            color: var(--Dark-Text);
+            font-family: 'Cabin', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* -------------------- Layout and Spacing -------------------- */
+        .content-wrapper {
+            max-width: 1100px; 
+            margin: 60px auto; 
+            padding: 0 20px;
+        }
+        section {
+            padding: 50px 0;
+            border-bottom: 2px solid rgba(56, 118, 29, 0.1); 
+            margin-bottom: 30px;
+        }
+        .site-header {
+            padding: 70px 20px 50px;
+        }
+        
+        /* --- Image Styling --- */
+        .header-image {
+            max-width: 350px; 
+            height: auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* -------------------- Typography Styling -------------------- */
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--Primary-Green);
+            font-size: 4.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: var(--Terracotta);
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--Primary-Green);
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        /* -------------------- Dynamic Advantage Box Styling -------------------- */
+        .advantage-box {
+            background-color: white;
+            border: 4px solid var(--Primary-Green);
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 750px;
+            box-shadow: 8px 8px 0px var(--Secondary-Green);
+        }
+        .instruction {
+            font-style: normal;
+            font-size: 1em;
+            font-weight: 700;
+            color: var(--Terracotta);
+            /* Added margin for breathing room */
+            margin-bottom: 20px; 
+        }
+        .advantage-headline {
+            color: var(--Terracotta);
+            font-size: 2.5em;
+            margin-top: 0;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+        .advantage-text {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        /* -------------------- Creation Steps Grid (More appealing colors) -------------------- */
+        #creation-steps {
+             /* Adjusted section BG color to ensure contrast with new body BG */
+             background-color: #E6F0D0; /* Slightly more distinct light green */
+             padding: 60px 0;
+             margin-bottom: 0;
+             border-bottom: none;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: left;
+            margin-top: 40px;
+        }
+        .step {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--Secondary-Green);
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+        }
+        .step h4 {
+            color: var(--Primary-Green);
+            margin-top: 0;
+            font-family: 'Cabin', sans-serif;
+            font-size: 1.2em;
+        }
+        .step p {
+            font-size: 0.95em;
+        }
+
+        /* -------------------- Footer -------------------- */
+        .site-footer {
+            padding: 30px 0;
+            background-color: var(--Primary-Green); 
+            color: #FFFFFF;
+            font-size: 1em;
+        }
+        .site-footer p {
+            margin: 5px 0;
+        }
+
+        /* -------------------- Responsive Design (Mobile) -------------------- */
+        @media (max-width: 800px) {
+            .main-title {
+                font-size: 2.5em;
+                letter-spacing: 2px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .step {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <h1 class="main-title">TERRARIUM CREATION: YOUR MINI ECO HOME</h1>
+        
+        <img src="trheaderimage.png" alt="A cute and practical illustration of a thriving miniature ecosystem inside a glass terrarium." class="header-image">
+    </header>
+
+    <main class="content-wrapper">
+
+        <section id="dynamic-advantage">
+            <p class="instruction">🌿 <b>Witness Ecological Insight:</b> Reload to reveal a new, powerful advantage of your miniature ecosystem.</p>
+            <div class="advantage-box">
+                <h2 class="advantage-headline" id="advantage-headline">Loading Advantage...</h2>
+                <p class="advantage-text" id="advantage-text">Please ensure JavaScript is enabled.</p>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="creation-steps">
+            <h3 class="section-title">🌱 Creating Your Self-Sustaining System</h3>
+            <p>Understand the steps for ecological engineering at the micro-scale.</p>
+            <div class="steps-grid">
+                <div class="step">
+                    <h4>1. Choose Your Vessel 🏺</h4>
+                    <p>Select a <b>clear, sealable container</b> to serve as the dome for your micro-environment. This establishes the closed system for moisture recycling.</p>
+                </div>
+                <div class="step">
+                    <h4>2. Add Drainage 💧</h4>
+                    <p>Layer materials like <b>pebbles and activated charcoal</b> to manage water flow and prevent root asphyxiation, mimicking natural subsurface drainage.</p>
+                </div>
+                <div class="step">
+                    <h4>3. Soil & Substrate 🌍</h4>
+                    <p>Introduce the appropriate <b>nutrient rich soil mix</b>—the living medium that supports plant growth and contains decomposers.</p>
+                </div>
+                <div class="step">
+                    <h4>4. Plant Your Greens 🌲</h4>
+                    <p>Carefully place <b>small, humidity loving plants</b> (like mosses or ferns) that thrive in the adapted climate, emphasizing species selection.</p>
+                </div>
+                <div class="step">
+                    <h4>5. Fine Tune & Decorate ✨</h4>
+                    <p>Arrange plants and <b>add natural elements</b> like stones or branches, completing the habitat structure and niche distribution.</p>
+                </div>
+                <div class="step">
+                    <h4>6. Water & Seal 🔒</h4>
+                    <p>Mist lightly to introduce the initial moisture, then <b>seal the container</b> to begin the self regulating water cycle and ecological balance.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>A simple step towards understanding global systems and ecological balance.</p>
+        <p>Presented by Students of Biodiversity, Conservation and Adaptation.</p>
+    </footer>
+
+    <script>
+        // Array containing all 12 terrarium advantages
+        const advantages = [
+            {
+                headline: "Micro-Ecosystem Education",
+                text: "Terrariums serve as self-contained, miniature ecosystems, offering a simple, hands-on model to study concepts like the water cycle, photosynthesis, and decomposition in action, making abstract ecology lessons tangible."
+            },
+            {
+                headline: "Air Quality Improvement",
+                text: "Just like larger plant life, the flora inside a terrarium performs photosynthesis, absorbing carbon dioxide and releasing vital oxygen, contributing to a fresher, more breathable indoor environment."
+            },
+            {
+                headline: "Stress Reduction & Wellness",
+                text: "Caring for and observing a living terrarium is a calming, mindful activity proven to reduce stress, lower blood pressure, and improve overall mental well-being through passive interaction with nature."
+            },
+            {
+                headline: "Low Water Consumption",
+                text: "Closed terrariums operate on a near-perfect water cycle (evaporation/condensation), requiring minimal external watering, making them an excellent example of water-wise, sustainable gardening."
+            },
+            {
+                headline: "Upcycling & Waste Reduction",
+                text: "Terrariums often utilize repurposed glass containers (jars, bottles, aquariums), promoting upcycling and diverting glass waste that would otherwise contribute to landfill burden."
+            },
+            {
+                headline: "Biodiversity in Miniature",
+                text: "They allow for the cultivation and close observation of smaller, unique flora (like mosses and ferns), fostering a greater appreciation for the subtle diversity of life often overlooked in larger gardens."
+            },
+            {
+                headline: "Humid Habitat Creation",
+                text: "For dry environments, a closed terrarium creates a consistent, self-sustaining humid microclimate, which is crucial for specific tropical plants and mimics natural rainforest conditions."
+            },
+            {
+                headline: "Resilience Demonstration",
+                text: "A closed terrarium showcases ecological resilience, demonstrating how a balanced, contained system can adapt and persist with minimal external interference once the initial foundation is correctly established."
+            },
+            {
+                headline: "Space-Saving Greenery",
+                text: "Terrariums bring the beauty and benefits of nature into small spaces like apartments or dorms, making 'green space' accessible and fulfilling the need for nature connection anywhere."
+            },
+            {
+                headline: "Aesthetic Connection to Nature (Biophilia)",
+                text: "They enhance interior decor with a natural, peaceful element, directly addressing the human need for biophilia, or an innate connection to living systems, promoting psychological comfort."
+            },
+            {
+                headline: "Climate Change Analogy",
+                text: "The balanced, cyclical nature of a terrarium serves as a simple analogy to explain the delicate global balance—illustrating that small-scale disturbances can have system-wide, cyclical consequences."
+            },
+            {
+                headline: "Natural Filter for Dust",
+                text: "The moist substrate, moss, and foliage inside can help trap fine dust particles from the surrounding air, subtly acting as a natural, small-scale air purification system."
+            }
+        ];
+
+        function displayRandomAdvantage() {
+            // 1. Get a random index from the advantages array
+            const randomIndex = Math.floor(Math.random() * advantages.length);
+            const selectedAdvantage = advantages[randomIndex];
+
+            // 2. Get the DOM elements
+            const headlineElement = document.getElementById('advantage-headline');
+            const textElement = document.getElementById('advantage-text');
+
+            // 3. Update the content
+            headlineElement.textContent = `Advantage: ${selectedAdvantage.headline}`;
+            textElement.innerHTML = selectedAdvantage.text; 
+        }
+
+        // Run the function when the page loads
+        document.addEventListener('DOMContentLoaded', displayRandomAdvantage);
+    </script>
+
+</body>
+</html>
